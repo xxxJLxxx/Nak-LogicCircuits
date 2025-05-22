@@ -1,0 +1,378 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: #F0F0F0;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+div {
+    display: block;
+}
+
+button {
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    margin: 2px;
+    font-size: 12px;
+    font: Arial;
+    border: none;
+    min-width: 150px;
+}
+
+#feedback {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #FFFFCC;
+    border-style: solid;
+}
+
+button:hover {
+    background-color: rgb(170, 255, 50);
+    transition-duration: 0.0s;
+}
+
+button:active {
+    background-color: rgb(100, 200, 50);
+    transition-duration: 0s;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#side-menu {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: #FFFFCC;
+    border-right: 1px solid #736D33;
+    padding: 5px;
+    overflow-x: visible;
+    overflow-y: visible;
+    z-index: 100;
+}
+
+#top-menu {
+    height: 80px;
+    left: 111px;
+    top: 0px;
+    right: 0px;
+    position: fixed;
+    background: #FFFFCC;
+    border-bottom: 1px solid #736D33;
+    z-index: 100;
+}
+
+#simulator {
+    position: fixed;
+    left: 110px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    transform: scale(1);
+    transform-origin: 0px 0px;
+}
+
+.description {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: transparent;
+    font-family: monospace;
+    position: absolute;
+    padding: 0px;
+}
+
+.description:hover {
+    border-color: black;
+}
+
+.context {
+    background-color: #FFFFCC;
+    padding: 5px;
+}
+
+.context:hover {
+    background-color: rgb(170, 255, 50);
+}
+
+#circuit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.component {
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    position: absolute;
+    z-index: 20;
+}
+
+.input, .output {
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    cursor: pointer;
+    border: 2px solid;
+    z-index: 5;
+}
+
+.numberTextfield {
+    text-align: center;
+    border: 0px solid black;
+    max-width: 48px;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    position: absolute;
+}
+
+.selector {
+    cursor: pointer;
+    width: 90px;
+    height: 40px;
+    border: 3px solid #A38E01;
+    background: #FFFFCC;
+    margin-top: 100px;
+    margin: 0 auto;
+    position: fixed;
+}
+
+.wire {
+    position: absolute;
+    height: 3px;
+    background: black;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.wireNode {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    border: 0px solid black;
+    background-color: black;
+    z-index: 15;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: none;
+    position: fixed;
+    justify-content: center;
+    z-index: 200;
+    top: 0px;
+    left: 0px;
+}
+
+.modalContent {
+    background-color: #FFFFCC;
+    margin: auto;
+    position: absolute;
+    align-self: center;
+    border: 3px solid;
+    padding: 20px;
+}
+
+.selectorText {
+    color: #453D01;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
+    cursor: pointer;
+}
+
+.GateLabel {
+    cursor: pointer;
+    margin: auto;
+    color: black;
+    font-size: 70px;
+    font-family: arial;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 80px;
+}
+
+.subGateLabel {
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+}
+
+.Extender {
+    width: 0px;
+    height: 0px;
+    cursor: pointer;
+    position: absolute;
+    top: 39px;
+    left: 79px;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid #A38E01;
+    border-bottom: 5px solid #A38E01;
+}
+
+.Segment {
+    border: 2px solid lightgray;
+    position: absolute;
+    width: 0px;
+    height: 20px;
+}
+
+img:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    background-image: url(error.png);
+}
+
+.cross {
+    width: 20%;
+    min-width: 20%;
+    background-color: transparent;
+    top: -4px;
+    right: -4px;
+    position: absolute;
+}
+
+.numButton {
+    width: 20%;
+    min-width: 20%;
+    background-color: transparent;
+    bottom: -10%;
+    right: 20%;
+    position: absolute;
+    text-decoration: underline;
+}
+
+.numSelect {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    background-color: #FFFFCC;
+    top: -50%;
+    z-index: 2001;
+    position: relative;
+}
+
+.numSelectOkButton {
+    min-width: 20%;
+    height: 80%;
+    top: -5%;
+    position: absolute;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#LoadingBarDiv {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #FFFFCC;
+    border-style: solid;
+}
+#LoadingBar{
+    margin: 5px;
+    background-color: #4287f5;
+    height: 30px;
+}
+#mistakeNav {
+    margin: 0;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    background: #FFFFCC;
+    border-style: solid;
+}
+#mistakeBack {
+    margin: 0;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background: #FFFFCC;
+    border-style: solid;
+}
+.disabledInput, .disabledOutput {
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    border: 2px solid;
+    z-index: 4;
+}
+.Disabledcomponent {
+
+    height: auto;
+    width: auto;
+    position: absolute;
+    z-index: 4;
+}
